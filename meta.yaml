@@ -1,0 +1,40 @@
+package:
+  name: pinocchio
+  version: 2.9.9
+
+source:
+  git_url: https://github.com/stack-of-tasks/pinocchio.git
+  git_rev: pinocchio3-preview
+
+requirements:
+  build:
+    - cmake
+    - make
+    - {{ compiler('cxx') }}
+    - git
+    - python=3.9
+    - eigenpy=2.7.10
+    - boost-cpp
+  host:
+    - python=3.9
+    - eigenpy=2.7.10
+    - casadi
+    - urdfdom
+    - boost-cpp
+    - eigen
+  run:
+    - python=3.9
+    - eigenpy=2.7.10
+    - casadi
+    - urdfdom
+    - boost-cpp
+    - eigen
+
+about:
+  home: https://github.com/stack-of-tasks/pinocchio
+  license: LGPL-2.1
+  summary: 'Efficient Rigid Body Dynamics and Kinematics Library'
+
+extra:
+  recipe-maintainers:
+    - kai.ploeger
